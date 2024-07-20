@@ -9,13 +9,13 @@ const DATABASE_URL =postgresql://zokou_dadas_user:mzC48wONCmBJHeSwU1yoWTwc5psaVE
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(20_7_3617_f5b4_ee31 ),
+  SESSION_ID: (process.env.SESSION_ID || '20_7_3617_f5b4_ee31').trim(20_7_3617_f5b4_ee31 ),
   DATABASE:20_7_3617_f5b4_ee31
-    DATABASE_URL === databasePath
+    DATABASE_URL ===  postgresql://zokou_dadas_user:mzC48wONCmBJHeSwU1yoWTwc5psaVEHJ@dpg-cqb6p9aj1k6c73ami5m0-a.oregon-postgres.render.com/zokou_dadas
       ? new Sequelize({
           dialect: 'sqlite',
-          storage: DATABASE_URL,
-          logging: false,
+          storage: DATABASE_URl postgresql://zokou_dadas_user:mzC48wONCmBJHeSwU1yoWTwc5psaVEHJ@dpg-cqb6p9aj1k6c73ami5m0-a.oregon-postgres.render.com/zokou_dadas
+          logging: true,
         })
       : new Sequelize(DATABASE_URL, {
           dialect: 'postgres',
