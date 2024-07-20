@@ -5,12 +5,12 @@ const path = require('path')
 const configPath = path.join(__dirname, './config.env')
 const databasePath = path.join(__dirname, './database.db')
 if (existsSync(configPath)) require('dotenv').config({ path: configPath })
-const DATABASE_URL =
+const DATABASE_URL =postgresql://zokou_dadas_user:mzC48wONCmBJHeSwU1yoWTwc5psaVEHJ@dpg-cqb6p9aj1k6c73ami5m0-a.oregon-postgres.render.com/zokou_dadas
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
-  DATABASE:
+  SESSION_ID: (process.env.SESSION_ID || '').trim(20_7_3617_f5b4_ee31 ),
+  DATABASE:20_7_3617_f5b4_ee31
     DATABASE_URL === databasePath
       ? new Sequelize({
           dialect: 'sqlite',
